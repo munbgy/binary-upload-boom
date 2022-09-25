@@ -1,0 +1,15 @@
+#small {
+    max-width: 120px;
+    max-heigh: 120px;
+}
+
+#list {
+    font-size: small;
+    color: black
+    text-decoration: none;
+}
+
+#width {
+    width: 15%;
+    justify-content: center;
+}
