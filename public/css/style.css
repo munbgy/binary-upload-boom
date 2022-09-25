@@ -1,6 +1,6 @@
 #small {
-    max-width: 120px;
-    max-heigh: 120px;
+    max-width: 400px;
+    max-height: 175px;
 }
 
 #list {
@@ -13,3 +13,10 @@
     width: 15%;
     justify-content: center;
 }
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+    
