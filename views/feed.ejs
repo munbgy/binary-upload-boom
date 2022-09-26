@@ -1,16 +1,29 @@
 <%- include('partials/header') -%>
-<% for(var i=0; i<posts.length; i++) {%>
-<div class="card w-96 bg-base-100 shadow-xl image-full">
-  <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
-  <div class="card-body">
-    <h2 class="card-title"><%= posts[i].genre%></h2>
-    <p><%= posts[i].recipeName%></p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Get cooking!</button>
-    </div>
-  </div>
+<div class="col-2">
+  <div class="row justify-content-center mt-0 mb-2 ml-2">
+    <a class="btn btn-primary" href="/profile">Add new recipe</a>
+  </div>  
 </div>
-<% } %>
+<body>
+
+  <div class="grid-container">
+    <% for(var i=0; i<posts.length; i++) {%>
+    <div class="card w-80 bg-accent shadow-xl image-full grid-item ml-2 mb-2">
+      <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
+      <div class="card-body">
+        <h3 class="card-title"><%= posts[i].cuisine%></h2>
+        <p><%= posts[i].recipeName%></p>
+        <div class="card-actions justify-end">
+          <a href="/post/<%= posts[i]._id%>"><button class="btn btn-accent">Get cooking!</button></a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+
+</body>
+
   <!-- <div class="container">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">

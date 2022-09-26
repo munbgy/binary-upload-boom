@@ -1,6 +1,6 @@
 #small {
     max-width: 400px;
-    max-height: 175px;
+    max-height: 200px;
 }
 
 #list {
@@ -13,6 +13,40 @@
     width: 15%;
     justify-content: center;
 }
+
+#logo {
+    max-height: 250px;
+}
+
+#logo-header {
+    max-height: 85px;
+}
+p {
+    font-family: 'lato', sans-serif;
+}
+.h2 {
+    font-size: 36px;
+}
+.h3 {
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.h5 {
+    fontsize: 16px;
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap
+  }
+.grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 8px;
+    /* font-size: 30px;
+    text-align: center; */
+
+  }
 
 @tailwind base;
 

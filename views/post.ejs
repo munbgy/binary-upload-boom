@@ -1,32 +1,44 @@
 <%- include('partials/header') -%>
+<a class="btn col-2 btn-primary" href="/feed">Back to Recipe Book</a>
 <div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= post.recipeName %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
-      <h3>Ingredients</h3>
-      <h5>*  <%= post.ingredient1 %></h5>
-      <h5>*  <%= post.ingredient2 %></h5>
-      <h5>*  <%= post.ingredient3 %></h5>
-      <h5>*  <%= post.ingredient4 %></h5>
-      <h5>*  <%= post.ingredient5 %></h5>
-      <h5>*  <%= post.ingredient6 %></h5>
-      <h3>Directions</h3>
-      <h5>1.   <%= post.step1 %></h5>
-      <h5>2.   <%= post.step2 %></h5>
-      <h5>3.   <%= post.step3 %></h5>
-      <h5>4.   <%= post.step4 %></h5>
-      
+  <div class="row justify-content-center mt-5 grid-container">
+    <div class="col-8" >
+      <div class="pic grid-item">
+        <h2 class="h2"><%= post.recipeName %></h2>
+        <img class="img-fluid" src="<%= post.image%>" />
+      </div>  
+      <div class="ingredients bp-3">
+        <h3 class='h3'><%= post.cuisine %></h3>
+        <h3 class="h3">Ingredients</h3>
+        <h5>*  <%= post.ingredient1 %></h5>
+        <h5>*  <%= post.ingredient2 %></h5>
+        <h5>*  <%= post.ingredient3 %></h5>
+        <h5>*  <%= post.ingredient4 %></h5>
+        <h5>*  <%= post.ingredient5 %></h5>
+        <h5>*  <%= post.ingredient6 %></h5>
+        <h5>*  <%= post.ingredient7 %></h5>
+        <h5>*  <%= post.ingredient8 %></h5>
+        <h5>*  <%= post.ingredient9 %></h5>
+        <h5>*  <%= post.ingredient10 %></h5>
+      </div>
+      <div>
+        <h3 class="h3 pb-3">Directions</h3>
+        <h5 class="pb-3">1.   <%= post.step1 %></h5>
+        <h5 class="pb-3">2.   <%= post.step2 %></h5>
+        <h5 class="pb-3">3.   <%= post.step3 %></h5>
+        <h5 class="pb-3">4.   <%= post.step4 %></h5>
+      </div>
       <div class="row justify-content-between">
         <form
           class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+          <button class="btn btn-primary fa fa-heart" ></button>
+          <!-- type="submit" -->
         </form>
         <h3 class="col-3">Likes: <%= post.likes %></h3>
-        <%if(post.user == user.id){ %>
+        <!-- <%if(post.user == user.id){ %> -->
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
           method="POST"
@@ -34,7 +46,7 @@
         >
           <button class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
-        <%}%>
+        <!-- <%}%> -->
       </div>
     </div>
     <div class="col-3 mt-5">
@@ -47,7 +59,8 @@
             <label for="comment" class="form-label">Comment</label>
             <input type="text" class="form-control" id="comment" name="comment">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary">Submit</button>
+        <!-- type="submit" -->
       </form>
     </div>
     <ul>

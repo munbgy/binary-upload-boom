@@ -9,21 +9,26 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  cuisine: {
+    type: String,
+    required: true,
+  },
   cloudinaryId: {
     type: String,
     required: true,
   },
+  // ingredients: {[
   ingredient1: {
     type: String,
     required: true,
   },
   ingredient2: {
     type: String,
-    required: false,
+    required: true,
   },
   ingredient3: {
     type: String,
-    required: false,
+    required: true,
   },
   ingredient4: {
     type: String,
@@ -53,17 +58,18 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  //]},
   step1: {
     type: String,
     required: true,
   },
   step2: {
     type: String,
-    required: false,
+    required: true,
   },
   step3: {
     type: String,
-    required: false,
+    required: true,
   },
   step4: {
     type: String,
