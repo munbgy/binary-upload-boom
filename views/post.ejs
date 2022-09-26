@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-<a class="btn col-2 btn-primary" href="/feed">Back to Recipe Book</a>
+<a class="btn col-2 btn-primary ml-12" href="/feed">Back to Recipe Book</a>
 <div class="container">
   <div class="row justify-content-center mt-5 grid-container">
     <div class="col-8" >
@@ -28,25 +28,33 @@
         <h5 class="pb-3">3.   <%= post.step3 %></h5>
         <h5 class="pb-3">4.   <%= post.step4 %></h5>
       </div>
-      <div class="row justify-content-between">
+      <div class="row">
         <form
           class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-heart" ></button>
+          <button class="btn btn-secondary fa fa-heart" ></button>
           <!-- type="submit" -->
         </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
-        <!-- <%if(post.user == user.id){ %> -->
+        <form
+          class="col-1"
+          action="/post/deletePost/<%= post.id %>?_method=DELETE"
+          method="POST"
+        >
+          <button class="btn btn-secondary bg-red-600 fa fa-trash" ></button>
+          <!-- type="submit" -->
+        </form>
+        <h3 class="col-1">Likes: <%= post.likes %></h3>
+        <!-- <%if(post.user == user.id){ %>
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
           method="POST"
           class="col-3"
         >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+          <button class="btn btn-primary fa fa-trash"></button>
         </form>
-        <!-- <%}%> -->
+        <%}%> -->
       </div>
     </div>
     <div class="col-3 mt-5">
@@ -59,8 +67,7 @@
             <label for="comment" class="form-label">Comment</label>
             <input type="text" class="form-control" id="comment" name="comment">
         </div>
-        <button class="btn btn-primary">Submit</button>
-        <!-- type="submit" -->
+        <button type="submit" class="btn btn-primary bg-blue-700">Submit</button>
       </form>
     </div>
     <ul>
@@ -70,8 +77,8 @@
         </li>
       <% } %>
     </ul>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
+    <div class="col-6 mt-5 mb-20 justify-left">
+      <a class="btn btn-primary mr-36" href="/profile">Return to Profile</a>
       <a class="btn btn-primary" href="/feed">Return to Feed</a>
     </div>
   </div>
