@@ -48,6 +48,10 @@ p {
 
   }
 
+.footer {
+    max-height: 75px;
+}
+
 @tailwind base;
 
 @tailwind components;
