@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-<a class="btn col-2 btn-primary ml-12" href="/feed">Back to Recipe Book</a>
+<a class="btn col-2 btn-primary ml-12 align-middle" href="/feed">Back to Recipe Book</a>
 <div class="container">
   <div class="row justify-content-center mt-5 grid-container">
     <div class="col-8" >
@@ -34,7 +34,7 @@
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button type="submit" class="btn btn-secondary fa fa-heart" ></button>
+          <button type="submit" class="btn btn-accent bg-pink-600 fa fa-heart" ></button>
           <!-- type="submit" -->
         </form>
         <!-- <form
@@ -60,13 +60,13 @@
       <p><%= post.caption %></p>
     </div>
     <div class="mt-5">
-      <h2>Add a comment</h2>
+      <h2 class="h3">Add a comment</h2>
       <form action="/comment/createComment/<%=post._id%>" method="POST">
         <div class="mb-3">
             <label for="comment" class="form-label">Comment</label>
             <input type="text" class="form-control" id="comment" name="comment">
         </div>
-        <button type="submit" class="btn btn-primary pb-32 bg-blue-700">Submit</button>
+        <button type="submit" class="btn btn-primary mb-32 bg-blue-700">Submit</button>
       </form>
     </div>
     <ul>

@@ -19,6 +19,38 @@ module.exports = {
       console.log(err);
     }
   },
+  getAsian: async (req, res) => {
+    try {
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      res.render("asian.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getAmerican: async (req, res) => {
+    try {
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      res.render("american.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getMexican: async (req, res) => {
+    try {
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      res.render("mexican.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getItalian: async (req, res) => {
+    try {
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      res.render("italian.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getPost: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);

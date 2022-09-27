@@ -1,0 +1,43 @@
+<%- include('partials/header') -%>
+<div class="col-4">
+  <div class="row justify-content-center mt-0 mb-2 ml-2 pl-6">
+    <a class="btn btn-primary pl-5" href="/profile">Add new recipe</a>
+  </div>  
+</div>
+<body>
+
+  <div class="grid-container mb-32 pb-24">
+    <% for(var i=0; i<posts.length; i++) {%>
+        <% if (posts[i].cuisine === "American") {%>
+            <div class="card w-80 bg-accent shadow-xl image-full grid-item ml-2 mb-2">
+            <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
+            <div class="card-body">
+                <h3 class="card-title"><%= posts[i].cuisine%></h2>
+                <p><%= posts[i].recipeName%></p>
+                <div class="card-actions justify-end">
+                <a href="/post/<%= posts[i]._id%>"><button class="btn btn-accent">Get cooking!</button></a>
+                </div>
+            </div>
+            </div>
+        <% } %>
+    <% } %>
+  </div>
+
+
+</body>
+
+  <!-- <div class="container">
+    <div class="row justify-content-center mt-5">
+      <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li id="width" class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <h4 id="list"><%= posts[i].recipeName%></h4>
+              <img class="img-fluid" id="small" src="<%= posts[i].image%>">
+            </a>
+          </li>
+        <% } %>
+        </ul>
+    </div>
+  </div>   -->
+<%- include('partials/footer') -%>
