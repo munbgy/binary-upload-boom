@@ -48,6 +48,10 @@ p {
 
   }
 
+.american {
+    background-color: blue
+}
+
 .footer {
     max-height: 75px;
 }
