@@ -49,8 +49,17 @@ p {
   }
 
 .american {
-    background-color: blue
+    background-color: rgb(72, 72, 221)
 }
+
+.mexican {
+    background-color: rgb(211, 72, 48)
+}
+
+.asian {
+    ackground-color: rgb(206, 69, 206)
+}
+
 
 .footer {
     max-height: 75px;
