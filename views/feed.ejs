@@ -10,6 +10,17 @@
     <% for(var i=0; i<posts.length; i++) {%>
       <% if (posts[i].cuisine === "American") {%>
         <div class="card w-80 shadow-xl image-full grid-item ml-2 mb-2 american">
+          <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
+          <div class="card-body">
+            <h3 class="card-title"><%= posts[i].cuisine%></h2>
+            <p><%= posts[i].recipeName%></p>
+            <div class="card-actions justify-end">
+               <a href="/post/<%= posts[i]._id%>"><button class="btn btn-accent">Get cooking!</button></a>
+            </div>
+          </div>
+        </div>
+      <% } else if (posts[i].cuisine === "Mexican") {%>
+        <div class="card w-80 shadow-xl image-full grid-item ml-2 mb-2 mexican">
         <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
         <div class="card-body">
             <h3 class="card-title"><%= posts[i].cuisine%></h2>
@@ -19,18 +30,7 @@
             </div>
         </div>
         </div>
-    <% } else if (posts[i].cuisine === "Mexican") {%>
-      <div class="card w-80 shadow-xl image-full grid-item ml-2 mb-2 mexican">
-      <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
-      <div class="card-body">
-          <h3 class="card-title"><%= posts[i].cuisine%></h2>
-          <p><%= posts[i].recipeName%></p>
-          <div class="card-actions justify-end">
-          <a href="/post/<%= posts[i]._id%>"><button class="btn btn-accent">Get cooking!</button></a>
-          </div>
-      </div>
-      </div>
-  <% } else if (posts[i].cuisine === "Asian") {%>
+    <% } else if (posts[i].cuisine === "Asian") {%>
     <div class="card w-80 shadow-xl image-full grid-item ml-2 mb-2 asian">
     <figure><img id="small"src="<%= posts[i].image%>" alt="Yum" /></figure>
     <div class="card-body">
@@ -66,8 +66,8 @@
         </div>
       </div>
     </div>
-    <% } %>
-  </div> -->
+    <% } %> -->
+</div>
 
 
 </body>
